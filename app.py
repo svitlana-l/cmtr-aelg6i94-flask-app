@@ -2,7 +2,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-VERSION = "v3"
+VERSION = "v2"
 
 
 @app.route("/")
@@ -12,4 +12,4 @@ def index():
 
 @app.route("/health")
 def health():
-    return "BROKEN", 500
+    return "OK", 200
