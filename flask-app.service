@@ -1,0 +1,11 @@
+[Unit]
+Description=Flask application (gunicorn)
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/flask-app
+ExecStart=/usr/bin/python3 -m gunicorn --bind 0.0.0.0:8000 --workers 2 app:app
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

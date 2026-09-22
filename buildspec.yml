@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - python3 -m py_compile app.py
+      - echo Build completed
+
+artifacts:
+  files:
+    - "**/*"
